@@ -27,7 +27,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                bat 'copy target\\*.war C:\\tomcat\\webapps\\'
+                bat 'copy target\\*.jar C:\\tomcat\\webapps\\'
             }
         }
     }

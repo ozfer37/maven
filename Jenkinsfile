@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourname/project.git'
+                git 'https://github.com/ozfer37/maven.git'
             }
         }
 
@@ -27,7 +27,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'cp target/*.war /opt/tomcat/webapps/'
+                bat 'copy target\\*.war C:\\tomcat\\webapps\\'
             }
         }
     }
